@@ -16,7 +16,8 @@ def convert_glb():
     file.save(input_path)
 
     # Exécuter Supercell-Flat-Converter
-    subprocess.run(["python", "main.py", "decode"])
+     
+    subprocess.run(["python", "Supercell-Flat-Converter/main.py", "decode"])
 
     if os.path.exists(output_path):
         return send_file(output_path, as_attachment=True)
